@@ -49,13 +49,14 @@
         }
 
         /* 按钮样式 */
-        button {
-            padding: 20px 40px;
-            /* 按钮内边距，上下 20px，左右 40px */
-
-            font-size: 16px;
-            /* 字体大小 */
-        }
+        /* 只控制“点击这里下载”这个按钮 */
+            .download-btn {
+                padding: 20px 40px;     /* 按钮大小 */
+                font-size: 16px;        /* 字体大小 */
+                border-radius: 12px;    /* 圆角 */
+                border: none;           /* 去边框 */
+                cursor: pointer;        /* 鼠标手型 */
+            }
     </style>
     <!-- 内联 CSS 样式结束 -->
 </head>
@@ -81,7 +82,7 @@
     <a href="itms-services://?action=download-manifest&url=https://ipa.zhou75.cn/d/Android/18/52pojie/kg.plist" download>
         <!-- iOS 企业签名/描述文件下载链接，Safari 才能识别 -->
 
-        <button>点击这里下载</button>
+        <button class="download-btn">点击这里下载</button>
         <!-- 下载按钮 -->
     </a>
 
