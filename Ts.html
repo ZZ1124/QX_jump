@@ -13,8 +13,8 @@
       background: #f8f9fa;
       color: #333;
     }
-    h1 { text-align: center; color: #1a73e8; }
-    .intro { text-align: center; margin: 20px 0; font-size: 1.1em; }
+    h1 { text-align: center; color: #1a73e8; margin-bottom: 10px; }
+    .intro { text-align: center; margin: 0 0 30px; font-size: 1.1em; color: #555; }
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -24,13 +24,28 @@
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 20px;
-      transition: transform 0.2s;
+      padding: 24px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      color: inherit;
+      display: block;
+      position: relative;
     }
-    .card:hover { transform: translateY(-5px); }
-    .card h2 { margin: 0 0 12px; font-size: 1.4em; color: #d81e06; }
-    .card p { margin: 8px 0; color: #555; }
-    .link-btn {
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.4em;
+      color: #d81e06;
+    }
+    .card p {
+      margin: 8px 0;
+      color: #555;
+      line-height: 1.5;
+    }
+    .card .import-btn {
       display: inline-block;
       background: #1a73e8;
       color: white;
@@ -38,52 +53,80 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      margin-right: 10px;
+      margin-top: 12px;
     }
-    .link-btn.copy { background: #34a853; }
-    .footer { text-align: center; margin-top: 40px; color: #777; font-size: 0.9em; }
+    .tag-note {
+      font-size: 0.85em;
+      color: #777;
+      margin-top: 8px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #777;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
 
   <h1>ZZ1124 Rules</h1>
-  <p class="intro">iOS 去广告 / 重写 / 净化规则合集<br>主要适配 Quantumult X (QX)，欢迎订阅使用</p>
+  <p class="intro">iOS 去广告 / 重写 / 净化规则合集<br>点击卡片 → 一键导入 Quantumult X</p>
 
   <div class="card-container">
 
-    <div class="card">
+    <div class="card" data-qx="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_new.conf?tag=酷狗概念版最新版@ZZ1124">
       <h2>酷狗概念版 - 最新版净化</h2>
-      <p>去除开屏广告、会员弹窗、推荐推送、各种骚扰，实现接近纯净体验</p>
-      <p><strong>更新日期：</strong> 2023-01-26（适配当时最新版）</p>
-      <a href="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_new.conf" class="link-btn" target="_blank">订阅链接</a>
-      <button class="link-btn copy" onclick="copyToClipboard('https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_new.conf')">一键复制</button>
+      <p>去除开屏广告、会员弹窗、推荐推送、各种骚扰，实现接近纯净的音乐体验</p>
+      <p><strong>更新日期：</strong> 2023-01-26（适配当时最新版本）</p>
+      <p class="tag-note">导入时自动附加 tag=酷狗概念版最新版@ZZ1124</p>
+      <span class="import-btn">导入到 Quantumult X</span>
     </div>
 
-    <div class="card">
+    <div class="card" data-qx="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_old.conf?tag=酷狗概念版2.4.5@ZZ1124">
       <h2>酷狗概念版 - 旧版 2.4.5</h2>
-      <p>针对 2.4.5 版本的完整去广告规则（开屏、弹窗、推送全覆盖）</p>
-      <p><strong>旧版 App 下载：</strong> <a href="https://github.com/ZZ1124/html/raw/main/Kggnb.html" target="_blank">点此下载</a></p>
-      <a href="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_old.conf" class="link-btn" target="_blank">订阅链接</a>
-      <button class="link-btn copy" onclick="copyToClipboard('https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_old.conf')">一键复制</button>
+      <p>针对 2.4.5 版本完整净化：开屏、弹窗、推送、推荐全部覆盖</p>
+      <p><strong>旧版 App 下载：</strong> <a href="https://github.com/ZZ1124/html/raw/main/Kggnb.html" target="_blank" style="color:#1a73e8;">点此查看</a></p>
+      <p class="tag-note">导入时自动附加 tag=酷狗概念版2.4.5@ZZ1124</p>
+      <span class="import-btn">导入到 Quantumult X</span>
     </div>
 
-    <!-- 如果以后有更多规则，就继续加 card -->
+    <!-- 新规则继续加类似 <div class="card" data-qx="..."> 结构 -->
 
   </div>
 
   <div class="footer">
-    <p>仓库地址： <a href="https://github.com/ZZ1124/Rules" target="_blank">https://github.com/ZZ1124/Rules</a></p>
-    <p>© 2026 ZZ1124 | 规则仅供学习交流，如有侵权请联系删除</p>
+    <p>仓库地址：<a href="https://github.com/ZZ1124/Rules" target="_blank" style="color:#1a73e8;">https://github.com/ZZ1124/Rules</a></p>
+    <p>© ZZ1124 | 规则仅供学习交流，如导入失败请检查 Quantumult X 是否已安装并更新</p>
   </div>
 
   <script>
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert('订阅链接已复制到剪贴板！');
-      }).catch(err => {
-        alert('复制失败，请手动复制：' + text);
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const rawUrl = card.getAttribute('data-qx');
+        if (!rawUrl) {
+          alert('规则链接缺失');
+          return;
+        }
+
+        // 构造 Quantumult X 导入所需的 JSON 结构（remote-resource）
+        const config = {
+          "remote-resource": {
+            "rule": [rawUrl]
+          }
+        };
+
+        // JSON → base64
+        const jsonStr = JSON.stringify(config);
+        const base64 = btoa(unescape(encodeURIComponent(jsonStr)));  // 处理中文编码
+
+        // 拼接 open-app URL
+        const importUrl = "https://quantumult.app/x/open-app/" + base64;
+
+        // 跳转
+        window.location.href = importUrl;
       });
-    }
+    });
   </script>
 
 </body>
