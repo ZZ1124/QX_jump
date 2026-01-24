@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZZ1124 规则 - 去广告 / 重写 / 净化</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f8f9fa;
+      color: #333;
+    }
+    h1 { text-align: center; color: #1a73e8; }
+    .intro { text-align: center; margin: 20px 0; font-size: 1.1em; }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h2 { margin: 0 0 12px; font-size: 1.4em; color: #d81e06; }
+    .card p { margin: 8px 0; color: #555; }
+    .link-btn {
+      display: inline-block;
+      background: #1a73e8;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .link-btn.copy { background: #34a853; }
+    .footer { text-align: center; margin-top: 40px; color: #777; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+  <h1>ZZ1124 Rules</h1>
+  <p class="intro">iOS 去广告 / 重写 / 净化规则合集<br>主要适配 Quantumult X (QX)，欢迎订阅使用</p>
+
+  <div class="card-container">
+
+    <div class="card">
+      <h2>酷狗概念版 - 最新版净化</h2>
+      <p>去除开屏广告、会员弹窗、推荐推送、各种骚扰，实现接近纯净体验</p>
+      <p><strong>更新日期：</strong> 2023-01-26（适配当时最新版）</p>
+      <a href="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_new.conf" class="link-btn" target="_blank">订阅链接</a>
+      <button class="link-btn copy" onclick="copyToClipboard('https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_new.conf')">一键复制</button>
+    </div>
+
+    <div class="card">
+      <h2>酷狗概念版 - 旧版 2.4.5</h2>
+      <p>针对 2.4.5 版本的完整去广告规则（开屏、弹窗、推送全覆盖）</p>
+      <p><strong>旧版 App 下载：</strong> <a href="https://github.com/ZZ1124/html/raw/main/Kggnb.html" target="_blank">点此下载</a></p>
+      <a href="https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_old.conf" class="link-btn" target="_blank">订阅链接</a>
+      <button class="link-btn copy" onclick="copyToClipboard('https://github.com/ZZ1124/Rules/raw/main/QX/Kugou_gnb_old.conf')">一键复制</button>
+    </div>
+
+    <!-- 如果以后有更多规则，就继续加 card -->
+
+  </div>
+
+  <div class="footer">
+    <p>仓库地址： <a href="https://github.com/ZZ1124/Rules" target="_blank">https://github.com/ZZ1124/Rules</a></p>
+    <p>© 2026 ZZ1124 | 规则仅供学习交流，如有侵权请联系删除</p>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('订阅链接已复制到剪贴板！');
+      }).catch(err => {
+        alert('复制失败，请手动复制：' + text);
+      });
+    }
+  </script>
+
+</body>
+</html>
